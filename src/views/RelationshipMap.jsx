@@ -101,8 +101,8 @@ ${threads.map((t) => `${t.subject} (${t.from} → ${t.to}): ${t.one_line_coachin
       {/* Header */}
       <div className="flex items-start justify-between mb-8">
         <div>
-          <h1 className="font-[var(--font-display)] text-4xl mb-2">Relationship Map</h1>
-          <p className="text-[var(--color-text-muted)]">
+          <h1 className="font-[var(--font-display)] font-bold text-5xl mb-2">Relationship Map</h1>
+          <p className="text-[var(--color-text-muted)] text-sm">
             Your communication dynamics across key relationships.
           </p>
         </div>

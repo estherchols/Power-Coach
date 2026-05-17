@@ -93,8 +93,8 @@ export default function ComposeCoach({ threads, demoMode }) {
     <div className="animate-fade-in">
       {/* Header */}
       <div className="mb-8">
-        <h1 className="font-[var(--font-display)] text-4xl mb-2">Compose + Coach</h1>
-        <p className="text-[var(--color-text-muted)]">
+        <h1 className="font-[var(--font-display)] text-5xl font-bold mb-2">Compose + Coach</h1>
+        <p className="text-[var(--color-text-muted)] text-sm">
           Write your message. The coach watches and intervenes when it matters.
         </p>
       </div>

@@ -10,7 +10,7 @@ function ScoreRing({ score, label, color }) {
   return (
     <div className="flex flex-col items-center gap-1">
       <svg width="56" height="56" viewBox="0 0 64 64">
-        <circle cx="32" cy="32" r="28" fill="none" stroke="#2a2a30" strokeWidth="3.5" />
+        <circle cx="32" cy="32" r="28" fill="none" stroke="var(--color-border)" strokeWidth="3.5" />
         <circle
           cx="32" cy="32" r="28"
           fill="none" stroke={color} strokeWidth="3.5"
@@ -19,7 +19,7 @@ function ScoreRing({ score, label, color }) {
           transform="rotate(-90 32 32)"
           style={{ transition: "stroke-dasharray 0.8s ease" }}
         />
-        <text x="32" y="36" textAnchor="middle" fill={color} fontSize="16" fontWeight="700" fontFamily="'Instrument Serif', Georgia, serif">
+        <text x="32" y="36" textAnchor="middle" fill={color} fontSize="16" fontWeight="700" fontFamily="'Playfair Display', Georgia, serif">
           {score}
         </text>
       </svg>
@@ -87,10 +87,10 @@ export default function ThreadAnalyzer({ thread, demoMode, onBack }) {
     <div className="animate-fade-in">
       {/* Header */}
       <div className="mb-6">
-        <button onClick={onBack} className="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-amber)] transition-colors mb-3 flex items-center gap-1">
-          ← Back to Pulse
+        <button onClick={onBack} className="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors mb-3 flex items-center gap-1">
+          ← Back
         </button>
-        <h1 className="font-[var(--font-display)] text-3xl mb-1">{thread.subject}</h1>
+        <h1 className="font-[var(--font-display)] font-bold text-4xl mb-1">{thread.subject}</h1>
         <p className="text-[var(--color-text-muted)] text-sm">{thread.from} → {thread.to}</p>
       </div>
 

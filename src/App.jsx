@@ -90,6 +90,28 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[var(--color-bg)] text-[var(--color-text)] font-[var(--font-body)]">
+      {/* TOP NAV */}
+      <nav className="sticky top-0 z-40 border-b border-[var(--color-border)] bg-[var(--color-bg)]">
+        <div className="max-w-2xl mx-auto px-6 py-4 flex items-center justify-between">
+          <h1 className="text-2xl font-bold font-display text-[var(--color-text)]">The Net</h1>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={loadDemo}
+              className="px-3 py-1.5 text-xs font-semibold uppercase tracking-wider rounded-md border border-[var(--color-border)] text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-all"
+            >
+              Demo
+            </button>
+            <button
+              onClick={scanAll}
+              disabled={scanning}
+              className="px-3 py-1.5 text-xs font-semibold uppercase tracking-wider rounded-md bg-[var(--color-text)] text-[var(--color-bg)] hover:opacity-90 transition-all disabled:opacity-50"
+            >
+              {scanning ? "Scanning..." : "Scan"}
+            </button>
+          </div>
+        </div>
+      </nav>
+
       {/* MAIN CONTENT */}
       <main className="pb-24 max-w-2xl mx-auto px-6 pt-8">
         {view === VIEWS.dashboard && (
